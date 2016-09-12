@@ -1,0 +1,23 @@
+[
+    {
+	"date" : "Lundi&nbsp;29&nbsp;août<br/> Mardi&nbsp;30&nbsp;août<br/> Lab&nbsp;1:Lundi 29 août, &nbsp;B1",
+	"transparents" : "<ul> <li class=\"exam\"><a href=\"../Intro/intro.pdf\">Introduction</a> (<a href=\"../Intro/intro-b.pdf\">texte</a>) </li> <li class=\"examintra\"><a href=\"../Web/web.pdf\">Interfaces Web</a><br /> (<a href=\"../Web/web-b.pdf\">texte</a>)</li> </ul>",
+	"documents" : "<ul> <li class=\"examintra\"> <a href=\"prealables.php\">Quelques préalables</a></li> <li class=\"examintra\">Outils des fureteurs <a href=\"https://developers.google.com/web/tools/chrome-devtools/?hl=en\">Chrome</a> et <a href=\"https://developer.mozilla.org/en-US/docs/Tools\">Firefox</a> <ul> <li><a href=\"https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector\">Inspection Firefox</a></li> <li><a href=\"https://developers.google.com/web/tools/chrome-devtools/iterate/?hl=en\">Inspection Chrome</a></li> </ul> </li> <li class=\"examintra\">Exemples JavaScript&nbsp;: <ul> <li><a href=\"http://www.w3schools.com/js/tryit.asp?filename=tryjs_write\">Fonction</a> <li><a href=\"http://www.w3schools.com/js/tryit.asp?filename=tryjs_function1\">Événements</a> <li><a href=\"http://www.w3schools.com/js/tryit.asp?filename=tryjs_dom\">DOM</a> <li class=\"examintra\"><a href=\"../Web/menu.html\">menu.html</a></li> <li class=\"examintra\"><a href=\"../Web/jquery.html\">jquery.html</a></li> </ul> </ul>",
+	"evaluations" : "", 
+        "laboratoire" : "Lab&nbsp;1:Lundi 29 août, &nbsp;B1 "
+    },
+    {
+	"date" : "Mardi&nbsp;6&nbsp;sept.<br/> Lundi 12 sept.<br/> Lab&nbsp;1:Mercredi 7 sept.&nbsp;B2",
+	"transparents" : "<ul> <li>Suite d'Interfaces Web</li> </ul> <ul> <li class=\"exam\"><a href=\"../Processus/processus.pdf\">Développement centré-utilisateur</a> (<a href=\"../Processus/processus-b.pdf\">texte</a>)</li> <li class=\"exam\"><a href=\"../Processus/holis.pdf\">Ex. Holis</a></li> </ul>",
+	"documents" : "<ul class=\"examintra\"> <li><a href=\"../Intro/quiz.php\">Quiz de rappel</a></li> <li><a href=\"http://www.w3schools.com/angular/angular_model.asp\">ng-model</a></li> <li><a href=\"http://www.w3schools.com/angular/angular_directives.asp\">ng-repeat</a></li> <li><a href=\"http://www.w3schools.com/Ajax/tryit.asp?filename=tryajax_get\">Ajax</a></li> <li><a href=\"http://www.w3schools.com/bootstrap/\">Bootstrap</a> et <a href=\"http://www.w3schools.com/html/html5_webworkers.asp\">Web Worker</a> pour TP2 <ul> <li><a href=\"http://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp\">Dropdown</a></li> <li><a href=\"http://www.w3schools.com/bootstrap/bootstrap_progressbars.asp\">Progress bar</a></li> <li>Exemples de worker ineffectifs&nbsp;: <ul> <li><a href=\"../Web/webworker-broken.html\">Exécution non accessible</a></li> <li><a href=\"../Web/webworker-broken2.html\">Interface gelée</a></li> </ul> </ul> </li> </ul> ",
+	"evaluations" : "",
+	"laboratoire" : "Lab&nbsp;1:Mercredi 7 sept.&nbsp;B2 Lab&nbsp;1:Lundi 12 sept.&nbsp;B2 "
+    },
+    {
+	"date" : "Lundi 19 sept.<br/> Mardi&nbsp;13&nbsp;sept.<br/> Lab 1: Mercredi 14 sept. B1 ",
+	"transparents" : "<ul> <li class=\"exam\"><a href=\"../Conception1/conception1.pdf\">Conception 1</a>  (<a href=\"../Conception1/conception1-b.pdf\">texte</a>)<br/> </li> </ul> ",
+	"documents" : "Lectures&nbsp;: <ul style=\"margin:0pt\"> <li class=\"exam\"><a href=\"http://www.cse.chalmers.se/research/group/idc/ituniv/kurser/09/hcd/literatures/maguire%202001b%20UCD%20methods.pdf\">Methods to support human-centred design</a> (Maguire, 2001b)</li> <li class=\"exam\"><a href=\"../../Exercices/Emilie/index.php\">Emilie</a></li> <li>Détails de <a href=\"../../Tp/Protege/holis.pdf\">Holis</a></li> <li><a href=\"../Processus/Protege/commentaires-corrections-tp1-20073.pdf\">Commentaires TP1</a></li> <li>Détails facultatifs&nbsp;: Respect <a href=\"../../Respect/5.3/index.html\">(local)</a> <a href=\"../../Respect/respect3-3.pdf\">(PDF)</a></li> <li class=\"exam\"><a href=\"../Processus/quiz.php\">Quiz de rappel</a></li> </ul> ",
+	"evaluations" : "",
+	"laboratoire" : "Lab&nbsp;1: Lundi 12 sept.&nbsp;B1<br/> Lab&nbsp;1: Mercredi 19 sept.&nbsp;B2 "
+    }
+]
