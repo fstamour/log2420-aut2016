@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    
+    <title>Scéance</title>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="seance.js"></script>
+    <link rel="stylesheet" type="text/css" href="seance.css">
+    
+  </head>
+  <body>
+    <div ng-app="seance" ng-controller="seanceCtrl">
+      <div id="header">Header</div>
+      <div id="content">
+	<div id="raw">
+	  <ul>
+	    <li ng-repeat="item in menu.Navigation">
+	      <a href="{{item.Lien}}"
+		 ng-class="{niveau1: item.Niveau == 1}">
+		{{item.Nom}}
+	      </a>
+	    </li>
+	  </ul>
+	</div>
+	<div id="seances">
+	  <table>
+	    <thead>
+	      <th>Semaine</th>
+	      <th>Transparents</th>
+	      <th>Documents</th>
+	      <th>Évaluations</th>
+	    </thead>
+	    <tr ng-repeat="seance in seances">
+	      <td ng-bind-html="seance.date"></td>
+	      <td ng-bind-html="seance.transparents"></td>
+	      <td ng-bind-html="seance.documents"></td>
+	      <!-- <td ng-bind-html="seance.evaluations"></td> -->
+	      <td ng-bind-html="seance.laboratoire"></td>
+	    </tr>
+	  </table>
+	</div>
+      </div>
+      <div id="footer">Footer</div>
+    </div>
+  </body>
+</html>

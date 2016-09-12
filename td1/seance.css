@@ -1,0 +1,31 @@
+
+body {
+    color: darkBlue;
+}
+
+td, th {
+    border: 1px solid black;
+}
+
+#content {
+    margin-left: 10em;
+}
+
+#raw {
+    color: red;
+    float: left;
+    margin-left: -10em;
+    width: 9em;
+}
+
+#seances {
+    /*float: right;*/
+}
+
+#footer {
+    float: bottom;
+}
+
+.niveau1 {
+    padding-left: 10px;
+}
