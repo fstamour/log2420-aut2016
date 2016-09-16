@@ -29,3 +29,7 @@ td, th {
 .niveau1 {
     padding-left: 10px;
 }
+
+#noMargin {
+	margin: 0;
+}
