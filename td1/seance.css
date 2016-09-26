@@ -3,6 +3,10 @@ body {
     color: darkBlue;
 }
 
+h1 {
+    margin-top: 0px;
+}
+
 #detail_seance td, th {
     border: 1px solid black;
 }
@@ -11,9 +15,21 @@ body {
     padding: 1em;
 }
 
+#header h1, h2, h3 {
+    margin: 0px;
+}
 #header {
     width: 100%;
     background-image:url(http://www.groupes.polymtl.ca/log2420/background2.jpg);
+}
+
+#header .right {
+    background-color: #cecab6;
+    text-align: right;
+}
+
+#header .right p {
+    margin: 0px;
 }
 
 #content {
