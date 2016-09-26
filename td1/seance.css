@@ -7,6 +7,10 @@ body {
     border: 1px solid black;
 }
 
+#detail_seance td.right {
+    padding: 1em;
+}
+
 #header {
     width: 100%;
     background-image:url(http://www.groupes.polymtl.ca/log2420/background2.jpg);

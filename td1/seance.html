@@ -69,13 +69,13 @@
           </span>
 		      <table id="detail_seance">
 			      <thead>
-			        <th>Semaine</th>
+			        <th colspan="2">Semaine</th>
 			        <th>Transparents</th>
 			        <th>Documents</th>
 			        <th>Évaluations</th>
 			      </thead>
 			      <tr ng-repeat="seance in seances">
-              <td><a name="{{$index + 1}}">{{$index + 1}}</a></td>
+              <td class="right"><a name="{{$index + 1}}">{{$index + 1}}</a></td>
 			        <td ng-bind-html="seance.date"></td>
 			        <td ng-bind-html="seance.transparents"></td>
 			        <td ng-bind-html="seance.documents"></td>
