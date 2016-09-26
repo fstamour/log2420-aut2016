@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     
-    <title>Scéance</title>
+    <title>Séance</title>
 
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <script src="seance.js"></script>
@@ -13,26 +13,28 @@
   <body>
     <div ng-app="seance" ng-controller="seanceCtrl">
       <!-- HEADER -->
-	    <table id="header">
-		    <tr>
-			    <td>
-				    <a href="http://www.polymtl.ca/">
-					    <img src="http://www.groupes.polymtl.ca/log2420/Images/logo03.gif"></img>
-				    </a>
-			    </td>
-			    <td>
-				    <h1 class="noMargin">LOG2420, Analyse et conception d'interfaces utilisateur</h1>
-				    <h2>Automne 2016</h2>
-			    </td>
-			    <td class="right"  style="" >
-				    <a href="http://www.groupes.polymtl.ca/log2420/Seances/20163/index.php?&formatimp=o">
-					    <img src="http://www.groupes.polymtl.ca/log2420/Images/printer.png"></img>
-					    <p class="noMargin">format <br> impression</p>
-				    </a>
-			    </td>			
-		    </tr>
-	    </table>
-      <hr id="bluehr">
+      <div id="header">
+	      <table>
+		      <tr>
+			      <td>
+				      <a href="http://www.polymtl.ca/">
+					      <img src="http://www.groupes.polymtl.ca/log2420/Images/logo03.gif"></img>
+				      </a>
+			      </td>
+			      <td>
+				      <h1 class="noMargin">LOG2420, Analyse et conception d'interfaces utilisateur</h1>
+				      <h2>Automne 2016</h2>
+			      </td>
+			      <td class="right"  style="" >
+				      <a href="http://www.groupes.polymtl.ca/log2420/Seances/20163/index.php?&formatimp=o">
+					      <img src="http://www.groupes.polymtl.ca/log2420/Images/printer.png"></img>
+					      <p class="noMargin">format <br> impression</p>
+				      </a>
+			      </td>			
+		      </tr>
+	      </table>
+        <hr id="bluehr">
+      </div>
 	    <!--<div display: style="display: table; background-image:url(http://www.groupes.polymtl.ca/log2420/background2.jpg);">
 		      <a style="display: table-row">
 			      <a style="display: table-cell" href="http://www.polymtl.ca/">
@@ -50,18 +52,22 @@
 	    </div>
       -->
       <div id="content">
-		    <div id="raw">
-		      <ul>
-			      <li ng-repeat="item in menu.Navigation">
-			        <a href="{{item.Lien}}"
-			           ng-class="{niveau1: item.Niveau == 1}">
-			          {{item.Nom}}
-			        </a>
-			      </li>
-		      </ul>
-			  <a class="right" href="http://www.groupes.polymtl.ca/log2420/Seances/20163/index.php?&formatimp=o">
-				  <img src="http://www.groupes.polymtl.ca/log2420/Images/printer.png"></img>
-				  <p class="noMargin">format <br> impression</p>
+        <!-- MENU -->
+        <div id="left-sidebar">
+		      <div id="menu">
+		        <ul>
+			        <li width="100%" ng-repeat="item in menu.Navigation">
+			          <a width="100%"
+                   href="{{item.Lien}}"
+			             ng-class="{niveau1: item.Niveau == 1}">
+			            {{item.Nom}}
+			          </a>
+			        </li>
+		        </ul>
+	        </div>
+				  <a class="right" href="http://www.groupes.polymtl.ca/log2420/Seances/20163/index.php?&formatimp=o">
+				    <img src="http://www.groupes.polymtl.ca/log2420/Images/printer.png"></img>
+				    <p class="noMargin">format <br> impression</p>
 		      </a>
 		    </div>
 		    <div id="seances">
