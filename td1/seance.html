@@ -27,12 +27,12 @@
 			    <td class="right"  style="" >
 				    <a href="http://www.groupes.polymtl.ca/log2420/Seances/20163/index.php?&formatimp=o">
 					    <img src="http://www.groupes.polymtl.ca/log2420/Images/printer.png"></img>
-					    <p>format <br> impression</p>
+					    <p class="noMargin">format <br> impression</p>
 				    </a>
 			    </td>			
 		    </tr>
 	    </table>
-      <hr>
+      <hr id="bluehr">
 	    <!--<div display: style="display: table; background-image:url(http://www.groupes.polymtl.ca/log2420/background2.jpg);">
 		      <a style="display: table-row">
 			      <a style="display: table-cell" href="http://www.polymtl.ca/">
@@ -59,6 +59,10 @@
 			        </a>
 			      </li>
 		      </ul>
+			  <a class="right" href="http://www.groupes.polymtl.ca/log2420/Seances/20163/index.php?&formatimp=o">
+				  <img src="http://www.groupes.polymtl.ca/log2420/Images/printer.png"></img>
+				  <p class="noMargin">format <br> impression</p>
+		      </a>
 		    </div>
 		    <div id="seances">
           <hr>
@@ -70,7 +74,7 @@
 			    <span ng-repeat="seance in seances">
             <a href="#{{$index + 1}}">{{$index + 1}}</a>
           </span>
-		      <table id="detail_seance">
+		      <table  id="detail_seance">
 			      <thead>
 			        <th colspan="2">Semaine</th>
 			        <th>Transparents</th>

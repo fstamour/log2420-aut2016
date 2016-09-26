@@ -7,8 +7,16 @@ h1 {
     margin-top: 0px;
 }
 
-#detail_seance td, th {
-    border: 1px solid black;
+hr {
+	color:orange;
+}
+
+#detail_seance {
+	border-spacing:0;
+}
+#detail_seance td,th {
+    border: 1pt solid midnightblue;
+	padding:3;
 }
 
 #detail_seance td.right {
@@ -28,18 +36,21 @@ h1 {
     text-align: right;
 }
 
-#header .right p {
-    margin: 0px;
+#bluehr {
+	height:3px;
+	color:midnightblue;
+	background-color:midnightblue;
+	margin-bottom: 30px;
 }
 
 #content {
-    margin-left: 10em;
+    margin-left: 0em;
 }
 
 #raw {
     color: red;
     float: left;
-    margin-left: -10em;
+    margin-left: 0em;
     width: 9em;
 }
 
@@ -55,6 +66,6 @@ h1 {
     padding-left: 10px;
 }
 
-#noMargin {
+.noMargin {
 	margin: 0;
 }
