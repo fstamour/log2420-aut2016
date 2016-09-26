@@ -12,75 +12,78 @@
   </head>
   <body>
     <div ng-app="seance" ng-controller="seanceCtrl">
-	<table style="background-image:url(http://www.groupes.polymtl.ca/log2420/background2.jpg)">
-		<tr>
-			<td>
-				<a href="http://www.polymtl.ca/">
-					<img src="http://www.groupes.polymtl.ca/log2420/Images/logo03.gif"></img>
-				</a>
-			</td>
-			<td>
-				<h1 id="noMargin" style="padding-top: 0px;">LOG2420, Analyse et conception d'interfaces utilisateur</h1>
-				<p  id="noMargin">Automne 2016</p>
-			</td>
-			<td align="right" align="center"  style="background-color:#cecab6" >
-				<a href="http://www.groupes.polymtl.ca/log2420/Seances/20163/index.php?&formatimp=o">
-					<img src="http://www.groupes.polymtl.ca/log2420/Images/printer.png"></img>
-					<p>format <br> impression</p>
-				</a>
-			</td>			
-		</tr>
-	</table>
-	<!--
-	  <div display: style="display: table; background-image:url(http://www.groupes.polymtl.ca/log2420/background2.jpg);">
-		<a style="display: table-row">
-			<a style="display: table-cell" href="http://www.polymtl.ca/">
-			 <img src="http://www.groupes.polymtl.ca/log2420/Images/logo03.gif"></img>
-			</a>
-			<a style="display: table-cell">
-				<h1 id="noMargin" style="padding-top: 0px;">LOG2420, Analyse et conception d'interfaces utilisateur</h1>
-				<p  id="noMargin">Automne 2016</p>
-			</a>
-			<a align="right" align="center" href="http://www.groupes.polymtl.ca/log2420/Seances/20163/index.php?&formatimp=o" style="display: table-cell; background-color:#cecab6">
-				<img src="http://www.groupes.polymtl.ca/log2420/Images/printer.png"></img>
-				<p>format impression</p>
-			</a>
-		</a>
-	  </div>
-	  -->
+	    <table id="header">
+		    <tr>
+			    <td>
+				    <a href="http://www.polymtl.ca/">
+					    <img src="http://www.groupes.polymtl.ca/log2420/Images/logo03.gif"></img>
+				    </a>
+			    </td>
+			    <td>
+				    <h1 id="noMargin" style="padding-top: 0px;">LOG2420, Analyse et conception d'interfaces utilisateur</h1>
+				    <p  id="noMargin">Automne 2016</p>
+			    </td>
+			    <td align="right" align="center"  style="background-color:#cecab6" >
+				    <a href="http://www.groupes.polymtl.ca/log2420/Seances/20163/index.php?&formatimp=o">
+					    <img src="http://www.groupes.polymtl.ca/log2420/Images/printer.png"></img>
+					    <p>format <br> impression</p>
+				    </a>
+			    </td>			
+		    </tr>
+	    </table>
+	    <!--<div display: style="display: table; background-image:url(http://www.groupes.polymtl.ca/log2420/background2.jpg);">
+		      <a style="display: table-row">
+			      <a style="display: table-cell" href="http://www.polymtl.ca/">
+			        <img src="http://www.groupes.polymtl.ca/log2420/Images/logo03.gif"></img>
+			      </a>
+			      <a style="display: table-cell">
+				      <h1 id="noMargin" style="padding-top: 0px;">LOG2420, Analyse et conception d'interfaces utilisateur</h1>
+				      <p  id="noMargin">Automne 2016</p>
+			      </a>
+			      <a align="right" align="center" href="http://www.groupes.polymtl.ca/log2420/Seances/20163/index.php?&formatimp=o" style="display: table-cell; background-color:#cecab6">
+				      <img src="http://www.groupes.polymtl.ca/log2420/Images/printer.png"></img>
+				      <p>format impression</p>
+			      </a>
+		      </a>
+	    </div>
+      -->
       <div id="content">
-		<div id="raw">
-		  <ul>
-			<li ng-repeat="item in menu.Navigation">
-			  <a href="{{item.Lien}}"
-			 ng-class="{niveau1: item.Niveau == 1}">
-			{{item.Nom}}
-			  </a>
-			</li>
-		  </ul>
-		</div>
-		<div id="seances">
-		 <h1>Détails des séances</h1>
-		 <p><a href="http://www.groupes.polymtl.ca/log2420/Seances/20163/index.php?charge=o">Version</a> pour les chargés de cours.
-			<p><b>Attention: cette page et son contenu seront modifiés en cours de trimestre selon les besoins. Attendez à la semaine correspondante pour imprimer les transparents!
-			<br>Dernière mise à jour : 29 août.</b><p/>
-			Le détail de chaque séance de cours est fourni semaine par semaine.</p>
-		  <table>
-			<thead>
-			  <th>Semaine</th>
-			  <th>Transparents</th>
-			  <th>Documents</th>
-			  <th>Évaluations</th>
-			</thead>
-			<tr ng-repeat="seance in seances">
-			  <td ng-bind-html="seance.date"></td>
-			  <td ng-bind-html="seance.transparents"></td>
-			  <td ng-bind-html="seance.documents"></td>
-			  <!-- <td ng-bind-html="seance.evaluations"></td> -->
-			  <td ng-bind-html="seance.laboratoire"></td>
-			</tr>
-		  </table>
-		</div>
+		    <div id="raw">
+		      <ul>
+			      <li ng-repeat="item in menu.Navigation">
+			        <a href="{{item.Lien}}"
+			           ng-class="{niveau1: item.Niveau == 1}">
+			          {{item.Nom}}
+			        </a>
+			      </li>
+		      </ul>
+		    </div>
+		    <div id="seances">
+		      <h1>Détails des séances</h1>
+		      <p><a href="http://www.groupes.polymtl.ca/log2420/Seances/20163/index.php?charge=o">Version</a> pour les chargés de cours.
+			    <p><b>Attention: cette page et son contenu seront modifiés en cours de trimestre selon les besoins. Attendez à la semaine correspondante pour imprimer les transparents!
+			        <br>Dernière mise à jour : 29 août.</b><p/>
+			      Le détail de chaque séance de cours est fourni semaine par semaine.</p>
+			    <span ng-repeat="seance in seances">
+            <a href="#{{$index + 1}}">{{$index + 1}}</a>
+          </span>
+		      <table id="detail_seance">
+			      <thead>
+			        <th>Semaine</th>
+			        <th>Transparents</th>
+			        <th>Documents</th>
+			        <th>Évaluations</th>
+			      </thead>
+			      <tr ng-repeat="seance in seances">
+              <td><a name="{{$index + 1}}">{{$index + 1}}</a></td>
+			        <td ng-bind-html="seance.date"></td>
+			        <td ng-bind-html="seance.transparents"></td>
+			        <td ng-bind-html="seance.documents"></td>
+			        <!-- <td ng-bind-html="seance.evaluations"></td> -->
+			        <td ng-bind-html="seance.laboratoire"></td>
+			      </tr>
+		      </table>
+		    </div>
       </div>
       <div id="footer">Footer</div>
     </div>

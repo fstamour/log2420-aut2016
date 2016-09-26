@@ -3,8 +3,13 @@ body {
     color: darkBlue;
 }
 
-td, th {
+#detail_seance td, th {
     border: 1px solid black;
+}
+
+#header {
+    width: 100%;
+    background-image:url(http://www.groupes.polymtl.ca/log2420/background2.jpg);
 }
 
 #content {
