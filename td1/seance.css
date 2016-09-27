@@ -1,4 +1,6 @@
 
+/*** Generic css rules ***/
+
 body {
     color: darkBlue;
 }
@@ -11,42 +13,24 @@ hr {
 	color:orange;
 }
 
+.noMargin {
+	  margin: 0;
+}
+
+
+/*** Details of the seances ***/
+
 #detail_seance {
-	border-spacing:0;
+	border-spacing: 0;
 }
 
 #detail_seance td,th {
     border: 1pt solid midnightblue;
-	  padding:3;
+	  padding: 3;
 }
 
 #detail_seance td.right {
     padding: 1em;
-}
-
-#header h1, h2, h3 {
-    margin: 0px;
-}
-#header {
-    width: 100%;
-    background-image:url(http://www.groupes.polymtl.ca/log2420/background2.jpg);
-}
-
-#header .right {
-    background-color: #cecab6;
-    text-align: right;
-}
-
-#bluehr {
-	height:3px;
-	color:midnightblue;
-	background-color:midnightblue;
-	margin-top: 30px;
-	margin-bottom: 30px;
-}
-
-#content {
-    margin-left: 10em;
 }
 
 #detail_seance td, th {
@@ -61,56 +45,39 @@ hr {
     /*float: right;*/
 }
 
+
+/*** Header ***/
+
+#header h1, h2, h3 {
+    margin: 0px;
+}
+
+#header {
+    width: 100%;
+}
+
+#header table {
+    width: 100%;
+    background-image:url(http://www.groupes.polymtl.ca/log2420/background2.jpg);
+}
+
+#header .right {
+    background-color: #cecab6;
+    text-align: right;
+}
+
+#bluehr {
+	height: 3px;
+	color: midnightBlue;
+	background-color: midnightBlue;
+
+	margin-bottom: 30px;
+}
+
+
 /*** Footer ***/
 
 #footer {
     float: bottom;
 }
 
-/*** Menu ***/
-
-#left-sidebar {
-    float: left;
-    margin-left: -10em;
-    width: calc(10% - 1em);
-}
-
-#menu {
-    border: 1pt solid midnightblue;
-}
-
-#menu ul {
-    padding: 0px;
-
-    /* Remove the bullets */
-    list-style-type: none;
-}
-
-#menu a {
-    color: darkBlue;
-    text-decoration: none;
-    width: 100%;
-}
-
-#menu ul li {
-    width: 100%;
-}
-
-#menu a:hover {
-    color: chocolate;
-}
-
-#menu ul li:nth-child(2) /*Seance*/
-{
-    color: rgb(218, 228, 237); /*** DOES NOT WORK YET ***/
-    background-color: midnightBlue;
-}
-
-
-.niveau1 {
-    padding-left: 10px;
-}
-
-.noMargin {
-	margin: 0;
-}

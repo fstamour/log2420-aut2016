@@ -1,0 +1,51 @@
+
+#left-sidebar {
+    float: left;
+
+    margin-left: -105px;
+    width: 105px;
+
+/*margin-left: -10em;
+    width: calc(10% - 1em);*/
+}
+
+#content {
+    margin-left: 105px;
+}
+
+#menu {
+    border: 1pt solid midnightblue;
+    margin-right: 15px;
+}
+
+#menu ul {
+    padding: 0px;
+
+    /* Remove the bullets */
+    list-style-type: none;
+}
+
+#menu a {
+    color: darkBlue;
+    text-decoration: none;
+    width: 100%;
+}
+
+#menu ul li {
+    width: 100%;
+}
+
+#menu a:hover {
+    color: chocolate;
+}
+
+#menu ul li:nth-child(2) /*Seance*/
+{
+    color: rgb(218, 228, 237); /*** DOES NOT WORK YET ***/
+    background-color: midnightBlue;
+}
+
+.niveau1 {
+    padding-left: 10px;
+}
+
