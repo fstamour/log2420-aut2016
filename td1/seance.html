@@ -37,24 +37,6 @@
 	      </table>
         <hr id="bluehr">
       </div>
-      
-	    <!--
-          <div display: style="display: table; background-image:url(http://www.groupes.polymtl.ca/log2420/background2.jpg);">
-		        <a style="display: table-row">
-			        <a style="display: table-cell" href="http://www.polymtl.ca/">
-			          <img src="http://www.groupes.polymtl.ca/log2420/Images/logo03.gif"></img>
-			        </a>
-			        <a style="display: table-cell">
-				        <h1 id="noMargin" style="padding-top: 0px;">LOG2420, Analyse et conception d'interfaces utilisateur</h1>
-				        <p  id="noMargin">Automne 2016</p>
-			        </a>
-			        <a align="right" align="center" href="http://www.groupes.polymtl.ca/log2420/Seances/20163/index.php?&formatimp=o" style="display: table-cell; background-color:#cecab6">
-				        <img src="http://www.groupes.polymtl.ca/log2420/Images/printer.png"></img>
-				        <p>format impression</p>
-			        </a>
-		        </a>
-	        </div>
-          -->
 
       <!-- Content (i.e. what's between the header and the footer) -->
       <div id="content">
@@ -85,33 +67,36 @@
 			    <p>
             <b>
               Attention: cette page et son contenu seront modifiés en cours de trimestre selon les besoins. Attendez à la semaine correspondante pour imprimer les transparents!
-			        <br>Dernière mise à jour : 29 août.
+			        <br><br>
+              Dernière mise à jour : 29 août.
             </b>
           </p>
-			    Le détail de chaque séance de cours est fourni semaine par semaine.</br>
+			    Le détail de chaque séance de cours est fourni semaine par semaine.<br>
 			    <span ng-repeat="seance in seances">
             <a href="#{{$index + 1}}">{{$index + 1}}</a>
           </span>
-          </p>
-		      <table  id="detail_seance">
-			      <thead>
-			        <th colspan="2">Semaine</th>
-			        <th>Transparents</th>
-			        <th>Documents</th>
-			        <th>Évaluations</th>
-			      </thead>
-			      <tr ng-repeat="seance in seances">
+          <table  id="detail_seance">
+	          <thead>
+		          <th colspan="2">Semaine</th>
+		          <th>Transparents</th>
+		          <th>Documents</th>
+		          <th>Évaluations</th>
+	          </thead>
+	          <tr ng-repeat="seance in seances">
               <td class="right"><a name="{{$index + 1}}">{{$index + 1}}</a></td>
-			        <td ng-bind-html="seance.date"></td>
-			        <td ng-bind-html="seance.transparents"></td>
-			        <td ng-bind-html="seance.documents"></td>
-			        <!-- <td ng-bind-html="seance.evaluations"></td> -->
-			        <td ng-bind-html="seance.laboratoire"></td>
-			      </tr>
-		      </table>
-		    </div>
+		          <td ng-bind-html="seance.date"></td>
+		          <td ng-bind-html="seance.transparents"></td>
+		          <td ng-bind-html="seance.documents"></td>
+		          <!-- <td ng-bind-html="seance.evaluations"></td> -->
+		          <td ng-bind-html="seance.laboratoire"></td>
+	          </tr>
+          </table>
+        </div>
+
+        <div id="footer">
+          Footer
+        </div>
       </div>
-      <div id="footer">Footer</div>
     </div>
   </body>
 </html>
