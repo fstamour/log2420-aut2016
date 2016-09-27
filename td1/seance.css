@@ -5,8 +5,8 @@ body {
     color: darkBlue;
 }
 
-h1 {
-    margin-top: 0px;
+h1, h2, h3 {
+    margin: 0px;
 }
 
 .noMargin {
@@ -14,7 +14,39 @@ h1 {
 }
 
 
-/*** Details of the seances ***/
+/*** Header ***/
+
+#header {
+    width: 100%;
+}
+
+#header table {
+    width: 100%;
+    background-image:url(http://www.groupes.polymtl.ca/log2420/background2.jpg);
+}
+
+/* This makes the first coloumn of the header fit exactly the size of the polymtl logo. */
+#header table tr td:first-child {
+    width: 1%;
+}
+
+#header table tr td:last-child {
+    /* This makes the last coloumn of the header fit exactly the size of its content. */
+    width: 1%;
+    background-color: #cecab6;
+    text-align: right;
+}
+
+#bluehr {
+	  height: 3px;
+	  color: midnightBlue;
+	  background-color: midnightBlue;
+
+	  margin-bottom: 30px;
+}
+
+
+/*** Seances ***/
 
 #seances hr {
 	  color:orange;
@@ -44,35 +76,6 @@ h1 {
 
 #detail_seance td.right {
     padding: 1em;
-}
-
-
-/*** Header ***/
-
-#header h1, h2, h3 {
-    margin: 0px;
-}
-
-#header {
-    width: 100%;
-}
-
-#header table {
-    width: 100%;
-    background-image:url(http://www.groupes.polymtl.ca/log2420/background2.jpg);
-}
-
-#header .right {
-    background-color: #cecab6;
-    text-align: right;
-}
-
-#bluehr {
-	height: 3px;
-	color: midnightBlue;
-	background-color: midnightBlue;
-
-	margin-bottom: 30px;
 }
 
 
