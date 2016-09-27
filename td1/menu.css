@@ -4,11 +4,8 @@
 
     margin-left: -105px;
     width: 105px;
-
-/*margin-left: -10em;
-    width: calc(10% - 1em);*/
 }
-
+/* The margin-left of the content must match the margin-left of the sidebar */
 #content {
     margin-left: 105px;
 }
@@ -16,36 +13,44 @@
 #menu {
     border: 1pt solid midnightblue;
     margin-right: 15px;
+    background-color: rgb(247, 238, 207);
 }
 
 #menu ul {
     padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 
-    /* Remove the bullets */
+    /* Removes the bullets */
     list-style-type: none;
 }
 
+#menu ul li {
+    padding-right: 3px;
+    padding-left: 3px;
+    width: calc(100% - 6px);
+}
+
 #menu a {
-    color: darkBlue;
+    color: midnightBlue;
     text-decoration: none;
     width: 100%;
 }
 
-#menu ul li {
-    width: 100%;
-}
-
-#menu a:hover {
+/*#menu a:hover {
     color: chocolate;
-}
+}*/
 
-#menu ul li:nth-child(2) /*Seance*/
-{
-    color: rgb(218, 228, 237); /*** DOES NOT WORK YET ***/
+#menu .selected {
+    color: rgb(218, 228, 237) !important;
     background-color: midnightBlue;
 }
 
-.niveau1 {
+#menu .title {
+    background-color: #a9c0d3;
+}
+
+#menu .niveau1 {
     padding-left: 10px;
 }
 

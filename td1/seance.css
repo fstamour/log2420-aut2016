@@ -41,12 +41,16 @@ h1, h2, h3 {
 	  height: 3px;
 	  color: midnightBlue;
 	  background-color: midnightBlue;
-
 	  margin-bottom: 30px;
 }
 
 
 /*** Seances ***/
+
+/* Add some blank at the end of the page */
+#content {
+    padding-bottom: 15em;
+}
 
 #seances hr {
 	  color:orange;
@@ -66,22 +70,14 @@ h1, h2, h3 {
     background-color: rgb(247, 238, 207);
 }
 
-#detail_seance td.right {
-    padding: 1em;
+#detail_seance td:first-child {
+    padding-left: 1em;
+    align: right;
 }
 
 #detail_seance td, th {
     border: 1px solid black;
 }
 
-#detail_seance td.right {
-    padding: 1em;
-}
 
-
-/*** Footer ***/
-
-#footer {
-    float: bottom;
-}
 

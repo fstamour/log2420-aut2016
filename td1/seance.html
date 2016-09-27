@@ -27,7 +27,7 @@
 				      <h1 class="noMargin">LOG2420, Analyse et conception d'interfaces utilisateur</h1>
 				      <h2>Automne 2016</h2>
 			      </td>
-			      <td class="right"  style="" >
+			      <td style="" >
 				      <a href="http://www.groupes.polymtl.ca/log2420/Seances/20163/index.php?&formatimp=o">
 					      <img src="http://www.groupes.polymtl.ca/log2420/Images/printer.png"></img>
 					      <p class="noMargin">format <br> impression</p>
@@ -38,43 +38,46 @@
         <hr id="bluehr">
       </div>
 
-      <!-- Content (i.e. what's between the header and the footer) -->
+      <!-- Content (i.e. what's after the header) -->
       <div id="content">
         <!-- MENU -->
         <div id="left-sidebar">
 		      <div id="menu">
 		        <ul>
-			        <li width="100%" ng-repeat="item in menu.Navigation">
-			          <a width="100%"
-                   href="{{item.Lien}}"
-			             ng-class="{niveau1: item.Niveau == 1}">
-			            {{item.Nom}}
-			          </a>
-			        </li>
-		        </ul>
-	        </div>
-				  <a class="right" href="http://www.groupes.polymtl.ca/log2420/Seances/20163/index.php?&formatimp=o">
-				    <img src="http://www.groupes.polymtl.ca/log2420/Images/printer.png"></img>
-				    <p class="noMargin">format <br> impression</p>
-		      </a>
-		    </div>
-		    <div id="seances">
+              <!-- Warning: harcoded comparison to "Séances" -->
+			        <li ng-repeat="item in menu.Navigation" id="{{'menuItem' + ($index + 1)}}"
+			            ng-class="{ niveau1: item.Niveau == 1,
+                            title: item.Lien == 0,
+                            selected: item.Nom == 'Séances' }">
+			          <a href="{{item.Lien}}" ng-if="item.Lien != 0 && item.Nom != 'Séances'">{{item.Nom}}</a>
+			          <span ng-if="!(item.Lien != 0 && item.Nom != 'Séances')">{{item.Nom}}</span>
+              </li>
+            </ul>
+          </div>
+          <a class="right" href="http://www.groupes.polymtl.ca/log2420/Seances/20163/index.php?&formatimp=o">
+	          <img src="http://www.groupes.polymtl.ca/log2420/Images/printer.png"></img>
+	          <p class="noMargin">format <br> impression</p>
+          </a>
+        </div>
+        <div id="seances">
           <hr>
-		      <h1>Détails des séances</h1>
-		      <p>
+	        <h1>Détails des séances</h1>
+	        <p>
             <a href="http://www.groupes.polymtl.ca/log2420/Seances/20163/index.php?charge=o">Version</a> pour les chargés de cours.
           </p>
-			    <p>
+	        <p>
             <b>
               Attention: cette page et son contenu seront modifiés en cours de trimestre selon les besoins. Attendez à la semaine correspondante pour imprimer les transparents!
 			        <br><br>
               Dernière mise à jour : 29 août.
             </b>
           </p>
-			    Le détail de chaque séance de cours est fourni semaine par semaine.<br>
-			    <span ng-repeat="seance in seances">
-            <a href="#{{$index + 1}}">{{$index + 1}}</a>
-          </span>
+          <p>
+		        Le détail de chaque séance de cours est fourni semaine par semaine.<br>
+		        <span ng-repeat="seance in seances">
+              <a href="#{{$index + 1}}">{{$index + 1}}</a>
+            </span>
+          </p>
           <table  id="detail_seance">
 	          <thead>
 		          <th colspan="2">Semaine</th>
@@ -83,7 +86,7 @@
 		          <th>Évaluations</th>
 	          </thead>
 	          <tr ng-repeat="seance in seances">
-              <td class="right"><a name="{{$index + 1}}">{{$index + 1}}</a></td>
+              <td><a name="{{$index + 1}}">{{$index + 1}}</a></td>
 		          <td ng-bind-html="seance.date"></td>
 		          <td ng-bind-html="seance.transparents"></td>
 		          <td ng-bind-html="seance.documents"></td>
@@ -91,10 +94,6 @@
 		          <td ng-bind-html="seance.laboratoire"></td>
 	          </tr>
           </table>
-        </div>
-
-        <div id="footer">
-          Footer
         </div>
       </div>
     </div>
