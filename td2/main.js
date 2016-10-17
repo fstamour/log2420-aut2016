@@ -8,4 +8,11 @@ $(function() {
     tokenCounter.postMessage({action: "compter",
                               texte: "asdfasdfa"});
 
+    $("#compter").click(function(e) {
+        console.log("Compter pressed", $("#text").val());
+    });
+
+    $("#annuler").click(function(e) {
+        console.log("Annuler pressed");
+    });
 });
