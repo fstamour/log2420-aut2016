@@ -9,26 +9,34 @@
     <title>LOG2420 - TD2 Concurence dans l'interface</title>
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8">
-          <textarea class="form-control" rows="3"></textarea>
-        </div>
-        <div class="col-md-4">
-          <div class="progress">
-            <div class="progress-bar progress-bar-striped active"
-                 role="progressbar"
-                 aria-valuenow="50"
-                 aria-valuemin="0"
-                 aria-valuemax="100"
-                 style="width:50%">
-            </div>
-          </div>
-          <input type="button" id="compter" value="Compter"></input>
-          <input type="button" id="annuler" value="Annuler"></input>
-		    </div>
-	    </div>
-	  </div>
-
+    <div class="container ajoutMargeTop">
+	  <div class="row">
+		  <div class="row">
+			<div class="col-xs-8">
+			  <textarea class="form-control" rows="5"></textarea>
+			</div>
+			<div class="col-xs-4">
+			    <div class="progress">
+				<div class="progress-bar progress-bar-striped active"
+					 role="progressbar"
+					 aria-valuenow="0"
+					 aria-valuemin="0"
+					 aria-valuemax="100"
+					 id="pourcent">
+				</div>
+			  </div>
+				<div class="col-xs-9 enleverPaddingCote">
+				  <button type="button" class="btn btn-primary btn-block">Compter!</button>
+				  <button type="button" class="btn btn-danger btn-block ajoutMargeTop">Annuler</button>
+				</div>
+				<div class="col-xs-3 text-center"> <!-- J'ai de la misère à centrer le texte-->
+				  <h3><output id="jetons"></output><br>
+					<small>Jetons</small>
+				  </h3>
+				</div>
+			</div>
+		  </div>
+		 </div>
+	</div>
   </body>
 </html>
