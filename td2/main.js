@@ -4,20 +4,25 @@ $(function () {
     var progressBar = $("#pourcent");
 
     tokenCounter.onmessage = function(e) {
-        pourcent.style.width = e.data;
-        console.log("Got message from worker: ", e.data);
+        // console.debug("Got message from worker: ", e.data);
+        switch(e.data.action) {
+        case "progress":
+            progressBar.css("width", e.data.progress + "%");
+            break;
+        case "done":
+            $("#jetons").text(e.data.result);
+            break;
+        }
     };
 
-
-    //tokenCounter.postMessage({action: "annuler"});
-    //tokenCounter.postMessage({action: "compter"});
-
     $("#compter").click(function(e) {
-        console.log("Compter pressed");
+        tokenCounter.postMessage({
+            action: "compter",
+            text: $("#text").val()
+        });
     });
 
     $("#annuler").click(function(e) {
-        console.log("Annuler pressed");
-        //tokenCounter.terminate();
+        tokenCounter.postMessage({action: "annuler"});
     });
 });
