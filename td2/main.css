@@ -1,16 +1,11 @@
-.ajoutMargeTop {
+
+.progress-bar {
+    /* Bootstrap's default is 0.6s, but it feels slooow */
+    transition: width 0.3s;
+}
+
+#buttonArea .row {
     margin-top: 5px;
-}
-
-.enleverPaddingCote	 {
-    margin-left:  -15px;
-    margin-right: -15px;
-}
-
-#pourcent {
-    width: 0%;
-}
-
-#jetons {
+    margin-bottom: 5px;
 }
 

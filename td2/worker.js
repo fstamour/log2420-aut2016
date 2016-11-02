@@ -1,8 +1,14 @@
 
 self.importScripts("CompteurJetons.js");
-var compteur = new CompteurJetons();
+var compteur = null;
 var progressor = null;
 
+function init() {
+    compteur = new CompteurJetons();
+    progressor = null;
+}
+
+init();
 
 /**
  * Ceci permet d'appeler en boucle la fonction "fn" sans bloquer le worker.
@@ -37,6 +43,7 @@ function step() {
             // Le processus est donc terminé et on envoie le résultat.
             postMessage({action: "done",
                          result: compteur.getJetons()});
+            init();
         }
     }
     return false;
@@ -58,8 +65,11 @@ self.addEventListener('message', function(e) {
         }
         break;
     case "annuler":
-        postMessage("Stopping the counter...");
-        progressor = null;
+        // On envoie le message d'annulation au thread d'ui afin d'éviter des
+        // problème de concurrence où le ui a réinitialisé la barre de progression
+        // mais qu'il recoit un message de progression tout de suite après.
+        postMessage({action: "annuler"});
+        init();
         break;
     }
 
