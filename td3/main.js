@@ -1,6 +1,7 @@
 "use strict"; // http://www.w3schools.com/js/js_strict.asp
 
 var currentLangEn_p = false;
+var villes = null;
 
 function changeLang(newLangEn_p) {
     currentLangEn_p = newLangEn_p;
@@ -10,11 +11,23 @@ function changeLang(newLangEn_p) {
     elementsToShow.show();
 }
 
+
+
+
 $(function() {
 
+    // Show/Hide the elements based on the current language.
     changeLang(currentLangEn_p);
+    // Setup the events for the Français/English buttons.
+    $("#french").onclick = () => changeLang(false);
+    $("#english").onclick = () => changeLang(true);
 
-
-
+    // Go fetch the list of cities.
+    $.getJSON("villes.json", function (data) {
+        // Save it in a global variable.
+        villes = data;
+        // Setup the autocompletion.
+        $("#ville").autocomplete({source: Object.keys(villes)});
+    });
 
 })
