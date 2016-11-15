@@ -30,4 +30,8 @@ $(function() {
         $("#ville").autocomplete({source: Object.keys(villes)});
     });
 
+    var map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 45.5078101, lng: -73.6192982},
+        zoom: 10
+    });
 })
