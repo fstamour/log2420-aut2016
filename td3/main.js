@@ -35,3 +35,9 @@ $(function() {
         zoom: 10
     });
 })
+
+
+function montrerVille() {
+    var ville = document.getElementById("ville").value;
+    document.getElementById("resultat").innerHTML = ville;
+}
