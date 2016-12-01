@@ -21,8 +21,8 @@ $(function() {
     // Show/Hide the elements based on the current language.
     changeLang(currentLangEn_p);
     // Setup the events for the Français/English buttons.
-    $("#french").onclick = () => changeLang(false);
-    $("#english").onclick = () => changeLang(true);
+    $("#french").click(() => changeLang(false));
+    $("#english").click(() => changeLang(true));
 
     // Go fetch the list of cities.
     $.getJSON("villes.json", function (data) {
@@ -31,13 +31,13 @@ $(function() {
         // Setup the autocompletion.
         var inputVille = $("#ville");
         inputVille.autocomplete({source: Object.keys(villes),
-                                  autoFocus: true});
+                                 autoFocus: true});
         inputVille.on('keypress', function(e) {
             // Quand on appuie sur ENTER et que le champs n'est pas vide.
             if (e.which == 13 && $(this).val()) {
                 var choix = $(this).val();
                 if(choix in villes) {
-					document.getElementById("resultat").innerHTML = choix;
+                    document.getElementById("resultat").innerHTML = choix;
                     montrerVille(villes[choix]);
                 }
             }
