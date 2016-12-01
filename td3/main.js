@@ -37,6 +37,7 @@ $(function() {
             if (e.which == 13 && $(this).val()) {
                 var choix = $(this).val();
                 if(choix in villes) {
+					document.getElementById("resultat").innerHTML = choix;
                     montrerVille(villes[choix]);
                 }
             }
