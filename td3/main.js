@@ -3,6 +3,7 @@
 var currentLangEn_p = false;
 var villes = null;
 var marker = null;
+var map = null;
 
 function changeLang(newLangEn_p) {
     currentLangEn_p = newLangEn_p;
@@ -42,7 +43,7 @@ $(function() {
         });
     });
 
-    var map = new google.maps.Map(document.getElementById('map'), {
+    map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 45.5078101, lng: -73.6192982}, // Environ la polymtl
         zoom: 10
     });
@@ -52,14 +53,15 @@ function montrerVille(ville) {
 	//Détermine la latitude et longitude de la ville choisie
 	var latitude = ville.lat;
 	var longitude = ville.lon;
-	
+
 	//Déplace la map vers la ville choisie
 	var latLng = new google.maps.LatLng(latitude, longitude);
 	map.panTo(latLng);
-	
+
 	//Ajoute un marker sur la ville choisie
-	if(marker==null)
-		marker = new google.maps.Marker(latLng);
-	else
+	  if(marker == null) {
+        marker = new google.maps.Marker({position: latLng,
+                                         map: map});
+    }
 		marker.setPosition(latLng);
 }
