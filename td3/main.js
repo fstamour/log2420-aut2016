@@ -27,17 +27,26 @@ $(function() {
         // Save it in a global variable.
         villes = data;
         // Setup the autocompletion.
-        $("#ville").autocomplete({source: Object.keys(villes)});
+        var inputVille = $("#ville");
+        inputVille.autocomplete({source: Object.keys(villes),
+                                  autoFocus: true});
+        inputVille.on('keypress', function(e) {
+            // Quand on appuie sur ENTER et que le champs n'est pas vide.
+            if (e.which == 13 && $(this).val()) {
+                var choix = $(this).val();
+                if(choix in villes) {
+                    montrerVille(villes[choix]);
+                }
+            }
+        });
     });
 
     var map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 45.5078101, lng: -73.6192982},
+        center: {lat: 45.5078101, lng: -73.6192982}, // Environ la polymtl
         zoom: 10
     });
 })
 
-
-function montrerVille() {
-    var ville = document.getElementById("ville").value;
-    document.getElementById("resultat").innerHTML = ville;
+function montrerVille(ville) {
+    // TODO Use ville.lat, ville.lon
 }
