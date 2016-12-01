@@ -2,6 +2,7 @@
 
 var currentLangEn_p = false;
 var villes = null;
+var marker = null;
 
 function changeLang(newLangEn_p) {
     currentLangEn_p = newLangEn_p;
@@ -48,5 +49,17 @@ $(function() {
 })
 
 function montrerVille(ville) {
-    // TODO Use ville.lat, ville.lon
+	//Détermine la latitude et longitude de la ville choisie
+	var latitude = ville.lat;
+	var longitude = ville.lon;
+	
+	//Déplace la map vers la ville choisie
+	var latLng = new google.maps.LatLng(latitude, longitude);
+	map.panTo(latLng);
+	
+	//Ajoute un marker sur la ville choisie
+	if(marker==null)
+		marker = new google.maps.Marker(latLng);
+	else
+		marker.setPosition(latLng);
 }
